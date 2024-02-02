@@ -24,7 +24,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        "http://data.fixer.io/api/symbols?access_key=1cf1dddd2eb7465ea4c6c046c5384963"
+        "https://data.fixer.io/api/symbols?access_key=1cf1dddd2eb7465ea4c6c046c5384963"
       )
         //getting an opject of the currencies
       .then((response) => {
