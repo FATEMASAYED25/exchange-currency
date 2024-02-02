@@ -1,6 +1,6 @@
 {
-  "short_name": "currency exchanger",
-  "name": "currency exchanger",
+  "short_name": "exchange currency",
+  "name": "exchange currency",
    "description": "Convert 160 currencies easily.",
    "prefer_related_applications":true,
   "icons": [
