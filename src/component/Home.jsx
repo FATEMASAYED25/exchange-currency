@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowsAltH } from "react-icons/fa";
+import Symbols from './Symbols';
 import axios from "axios";
 import Select from 'react-select';
 
@@ -22,18 +23,9 @@ const Home = () => {
   //get symbols for drobdown list
 
   useEffect(() => {
-    axios
-      .get(
-        "https://data.fixer.io/api/symbols?access_key=1cf1dddd2eb7465ea4c6c046c5384963"
-      )
-        //getting an opject of the currencies
-      .then((response) => {
-        const symbols = response.data.symbols;
-        setSymbols(symbols);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const symbols = Object.entries(Symbols);
+    setSymbols(symbols);
+    console.log(symbols)
   }, []);
 
   //get the converted amount
@@ -84,7 +76,7 @@ const Home = () => {
                 <br />
              
                 <Select
-                options={Object.entries(symbols).map(([key, value]) => ({
+                options={symbols.map(([key, value]) => ({
                   value: key,
                   label: `(${key})-${value}`,
                 }))}
@@ -104,7 +96,7 @@ const Home = () => {
                 <label htmlFor="tocurrency">to:</label>
                 <br />
                 <Select
-                options={Object.entries(symbols).map(([key, value]) => ({
+                options={symbols.map(([key, value]) => ({
                   value: key,
                   label: `(${key})-${value}`,
                 }))}
