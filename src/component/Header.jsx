@@ -41,13 +41,13 @@ const Header = () => {
         <div className="logo">
           <img src={logo} alt="SAI LOGO" />
         </div>
-        
+        {/*
         {!isAppInstalled ? (
           <button className='download' onClick={handleInstallButtonClick}>Download</button>
         ) : (
           <div>Thanks for installing our app</div>
         )}
-        
+        */}
         <div className='download'><NavLink to="https://www.facebook.com/digitalsai.net"><FaFacebook style={{ fontSize: '2.5em' }}/><p style={{margin:0}}>visit us</p></NavLink></div>
       </nav>
     </div>
